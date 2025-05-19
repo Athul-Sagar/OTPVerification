@@ -7,7 +7,7 @@ function PhoneAuth() {
   const [otp, setOtp] = useState('');
   const [confirmationResult, setConfirmationResult] = useState(null);
   const [user, setUser] = useState(null);
-  const [isOtpSent, setIsOtpSent] = useState(false); // To control showing OTP form
+  const [isOtpSent, setIsOtpSent] = useState(false); 
 
   const setUpRecaptcha = () => {
     if (!window.recaptchaVerifier) {
@@ -28,7 +28,7 @@ function PhoneAuth() {
     try {
       const result = await signInWithPhoneNumber(auth, phone, appVerifier);
       setConfirmationResult(result);
-      setIsOtpSent(true); // Show OTP verification form
+      setIsOtpSent(true); 
       alert('OTP sent!');
     } catch (error) {
       console.error("Error during signInWithPhoneNumber", error);
@@ -54,7 +54,7 @@ function PhoneAuth() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100vh', // Full height of the viewport
+      height: '100vh', 
       backgroundColor: '#f1f1f1',
     }}>
       <div style={{
